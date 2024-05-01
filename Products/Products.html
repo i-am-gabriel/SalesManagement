@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Products</title>
+
+    <!-- JS -->
+    <script src="./Products.js" defer></script>
+</head>
+<body>
+    <div class="container-fulid d-flex justify-content-center">
+        <!-- Page Navagation START-->
+        <div class="col-3 vh-100 pt-5" >
+            <!-- Admin Dash -->
+            <div class="mb-3 pt-5">
+                <!-- h ref -> hot reference -->
+                <a href="../AdminDash/AdminDash.html" class="btn btn-outline-primary w-100 text-start border-start-0 rounded-end-2 "title="Admin Dashboard"> <i class="bi bi-pie-chart-fill"></i> Admin Dashboard</a>
+            </div>
+            <!-- Customer  -->
+            <div class="mb-3">
+                <a href="../CustomerList/CustomerList.html" class="btn btn-outline-primary w-100 text-start rounded-end-2 border-start-0 "title="Custome Listr"> <i class="bi bi-file-earmark-person-fill"></i> Customer</a>
+            </div>
+            <!-- Orders -->
+            <div class="mb-3">
+                <a href="../index.html" class="btn btn-outline-primary w-100 text-start rounded-end-2 border-start-0"title="Orders"> <i class="bi bi-list-check"></i> Orders</a>
+            </div>
+            <!-- Products -->
+            <div class="mb-3">
+                <a href="../Products/Products.html" class="btn btn-outline-primary w-100 text-start rounded-end-2 border-start-0 active"title="Products"> <i class="bi bi-box-seam-fill"></i> Products</a>
+            </div>
+            <!-- Messages -->
+            <div class="mb-3">
+                <a hf="../index.html" class="btn btn-outline-primary w-100 text-start rounded-end-2 outline-0"title="Messages"> <i class="bi bi-chat-left-dots-fill"></i> Messages</a>
+            </div>
+            <!-- LogOut -->
+            <div class="mb-3">
+                <a href="../index.html" class="btn btn-outline-primary w-100 text-start rounded-end-2 outline-0"title="Messages"> <i class="bi bi-chat-left-dots-fill"></i> Logout</a>
+            </div>
+        </div>
+        <!-- PAge Navagation END -->
+
+
+            <!-- Main Content START -->
+    <div class="col-6">
+        <!-- Search Bar -->
+        <div class="row">
+            <!-- Search Section START -->
+            <div class="bg-secondary rounded-bottom-3 p-2">
+                <form class="d-flex" role="search">
+
+                    <div class="input-group mb-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" type="search" id="search" placeholder="Search">
+                            <label for="search">
+                                Search
+                            </label>
+                        </div>
+                        <span class="input-group-text">
+                            <button class="btn btn-outline-success" type="submit" title="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <!-- Search Section END -->
+        </div>
+
+        <!-- Product Section START -->
+        <div class="container mt-5">
+            <!-- Display Area -->
+            <div class="row d-flex justify-content-center" id="product">
+                
+            </div>
+        </div>
+        <!-- Product Section END -->
+    </div>
+    <!-- Main Content END -->
+        
+   <!-- Side Content START-->
+   <div class="col-3 vh-100 pt-5 d-none d-lg-block">
+    <!-- New Product Form  START -->
+    <div class="pt-5 mt-5 me-3">
+        <form action="">
+                <!-- Product Name Section START -->
+                <div class="mb-3">
+                    <label class="form-label" for="productName">Product Name<span class="text-danger">*</span></label>
+                    <input id="productName" class="form-control" title="Proudct Name" name="Product Name" type="text" placeholder="cheapbook air">
+                </div>
+                <!-- Product Name Section START -->
+                
+                <!-- Des riptionSection START -->
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description<span class="text-danger">*</span></label>
+                    <textarea id="description" class="form-control" title="Description" name="description" type="text" row="3" placeholder="just "></textarea>
+                </div>
+                <!-- Description Section END -->
+
+                <!-- Category Section START -->
+                <div class="mb-3">
+                    <label class="form-label" for="Category">Category<span class="text-danger">*</span></label>
+                    <select class="form-select" for="category" id="category">
+                        <option value="Laptops">Laptops</option>
+                        <option value="Desktops">Desktops</option>
+                        <option value="Phones">Phones</option>
+                        <option value="Tablets">Tablets</option>
+                        <option value="Bundle Deals">Bundle Deals</option>
+                        <option value="Repair Deals">Repair Deals</option>
+                        <option value="Accessories">Accessories / Other</option>                        
+                    </select>
+                </div>
+                <!-- Category Section END -->
+
+                <!-- Origin Section START -->
+                <div class="mb-3">
+                    <label class="form-label" for="origin">Origin<span class="text-danger">*</span></label>
+                    <input id="origin" class="form-control" title="Origin" name="origin" type="text" placeholder="South Korea">
+                </div>
+                <!-- Origin Section END -->
+
+                <!-- Price Section START -->
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price<span class="text-danger">*</span></label>
+                    <input id="price" class="form-control" title="Price" name="Price" type="number" placeholder="4.20" min="4.20" max="690000">
+                    <small class="text-muted">Min $4.20 Max $690000.00</small>
+                </div>
+                <!-- Price Section END -->
+                
+                <!-- File Section START -->
+                <div class="mb-3">
+                    <label class="form-label" for="File">File upload<span class="text-danger">*</span></label>
+                    <input id="file" class="form-control" title="File" name="file" type="file" >
+                    <small class="text-muted">Maximum file size is 25MB</small>
+                    <div style="display:none">Drop Here!!</div>
+                </div>
+                <!-- File Section END -->
+                <small class="my-3 text-muted">Compulsory fields marked <span class="text-danger">*</span></small>
+                <!-- User Actions Section START -->
+                <div class="d-flex justify-content-between ">
+                    <button type="reset" title="Cancel" class="btn btn-warning">Cancel</button>
+                    <button type="submit" title="Submit Form" class="btn btn-primary">Submit</button>
+                </div>
+                <!-- User Actions Section START -->
+
+            </form>
+        </div>
+    </div>
+        <!-- FORM END -->
+</body>
+</html>
